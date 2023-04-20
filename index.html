@@ -5,6 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
         <title>MeetMe Personal</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -19,77 +22,11 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
-      <style>
 
-    /* The sidepanel menu */
-.sidepanel {
-  height: 250px; /* Specify a height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-}
-
-/* The sidepanel links */
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style the button that is used to open the sidepanel */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: #444;
-}
+      </head>
 
 
-         </style>
-</head>
-    <body style="background-color:deeppink">
-
-<div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
-</div>
-
-<button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>
-<h2>Collapsed Sidepanel</h2>
-<p>Content...</p>
-
+      <body style="background-color:deeppink">
 
 
         *<!--================Header Menu Area =================-->*/
@@ -131,7 +68,47 @@
 <!--            	</nav>-->
 <!--            </div>-->
 <!--        </header>-->
-
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
 
         <!--================Header Menu Area =================-->
 
@@ -151,12 +128,12 @@
 									   <h3>Claris.N.Mukhwana</h3>
 									   <h4>Junior MIT developer</h4>
 									   <p>Student at <span><strong>eMobilis</strong>technology training insititute.</span></p>
-									   <ul class="list basic_info">
-										   <li><a href="#"><i class="lnr lnr-calendar-full"></i>25th May 2005</a></li>
-										   <li><a href="#"><i class="lnr lnr-phone-handset"></i> 0712345678</a></li>
-<!--										<li><a href="#"><i class="lnr lnr-envelope"></i> businessplan@donald</a></li>-->
-										   <li><a href="#"><i class="lnr lnr-home"></i> Nairobi Kenya</a></li>
-									  </ul>
+<!--									   <ul class="list basic_info">-->
+<!--										   <li><a href="#"><i class="lnr lnr-calendar-full"></i>25th May 2005</a></li>-->
+<!--										   <li><a href="#"><i class="lnr lnr-phone-handset"></i> 0712345678</a></li>-->
+<!--&lt;!&ndash;										<li><a href="#"><i class="lnr lnr-envelope"></i> businessplan@donald</a></li>&ndash;&gt;-->
+<!--										   <li><a href="#"><i class="lnr lnr-home"></i> Nairobi Kenya</a></li>-->
+<!--									  </ul>-->
 									   <ul class="list personal_social">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -174,9 +151,9 @@
         <!--================Welcome Area =================-->
                   <section class="welcome_area p_120" style="align-content: center">
         	           <div class="container" >
-<!--        		    <div class="row welcome_inner">-->
-<!--        			   <div class="col-lg-6">-->
-<!--        				  <div class="welcome_text">-->
+        		    <div class="row welcome_inner">
+        			   <div class="col-lg-6">
+        				  <div class="welcome_text">
         					   <h2>About Myself</h2>
                        <style> p{
                          font-size: large;
@@ -265,16 +242,16 @@
         <!--================End Welcome Area =================-->
 
         <!--================My Tabs Area =================-->
-<!--        <section class="mytabs_area p_120">-->
-<!--        	<div class="container">-->
-<!--        		<div class="tabs_inner">-->
-<!--					<ul class="nav nav-tabs" id="myTab" role="tablist">-->
-<!--						<li class="nav-item">-->
-<!--							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Experiences</a>-->
-<!--						</li>-->
-<!--						<li class="nav-item">-->
-<!--							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>-->
-<!--						</li>-->
+        <section class="mytabs_area p_120">
+        	<div class="container">
+        		<div class="tabs_inner">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Experiences</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>
+/<!--						</li>-->
 <!--					</ul>-->
 <!--					<div class="tab-content" id="myTabContent">-->
 <!--						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">-->
